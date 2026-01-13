@@ -66,7 +66,7 @@ function orderlist(response){
 
     response.writeHead(200, {'Content-Type' : 'text/html'});
 
-    mariadb.query("SELECT * FROM product", function(err, rows) {
+    mariadb.query("SELECT * FROM orderlist", function(err, rows) {
         response.write(orderlist_View);
 
         rows.forEach(element => {
